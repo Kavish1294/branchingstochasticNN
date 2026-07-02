@@ -5,7 +5,7 @@ suite that empirically checks the mathematical claims made in it.
 
 ---
 
-## ⚠️ Important notice about the manuscript
+## Important notice about the manuscript
 
 `fissionNeuralNetwork_DRAFT.pdf` is an **incomplete work in progress**.
 
@@ -14,9 +14,7 @@ suite that empirically checks the mathematical claims made in it.
   or any figure, equation, method, benchmark, or result in it — in its present form.
 - Its definitions, proofs, and results are provisional, may contain errors, and are
   subject to substantial revision or withdrawal without notice.
-- The manuscript is a **mathematical abstraction only**. It specifies no material
-  compositions, cross sections, device geometries, enrichment levels, control protocols,
-  or operational design parameters, and is not intended for the design or operation of any
+- The manuscript is a **mathematical abstraction only**. It specifies no physics, and is not intended for the design or operation of any
   physical system.
 
 The same disclaimer appears on a cover page and as a watermark inside the PDF itself.
@@ -27,38 +25,17 @@ The same disclaimer appears on a cover page and as a watermark inside the PDF it
 
 | File | Description |
 |------|-------------|
-| `fissionNeuralNetwork_DRAFT.pdf` | The draft manuscript, with a disclaimer cover page + per-page watermark and restricted permissions (see below). |
+| `fissionNeuralNetwork_DRAFT.pdf` | A draft document explaining the rationale behind the stochastic branching neural network. |
 | `bsnn_validation.py` | Object-oriented validation / benchmark suite (26 checks across 9 theorem areas). |
 | `fig_T2_moments.png` | Mean & variance propagation: simulation vs. theory (Thm 6.1). |
 | `fig_T3_criticality.png` | Population norm vs. generation in the sub-/critical/supercritical regimes (Thm 7.1). |
 | `fig_T8_comparison.png` | BSNN vs. unconstrained RNNs: one-step RMSE and homogeneity violation (Sec 14). |
-| `README.md` | This file. |
-
----
-
-## About the PDF restrictions (and their limits)
-
-The PDF is encrypted (AES-256) with an **empty user password**, so it **opens normally
-without prompting**, but an owner password locks its permissions:
-
-- **Content copying (text/graphics extraction): disabled.**
-- **Printing (low- and high-resolution): disabled.**
-- **Editing / annotation / form-filling / assembly: disabled** (read-only).
-
-Two honest caveats:
-
-1. **These flags are advisory.** Compliant viewers (Adobe Acrobat, most browsers'
-   built-in viewers, macOS Preview) honor them, but they can be removed with free tools.
-   They deter casual copying/printing; they are **not** strong security.
-2. **A PDF file cannot prevent its own download.** "No download" is a property of the
-   website/app that *hosts* a file, not of the file itself. Once someone has the file, they
-   have it. Disabling printing is the nearest file-level analog and is included above.
 
 ---
 
 ## Validation suite
 
-### What it does
+### Purpose
 
 `bsnn_validation.py` does not take the manuscript's math on faith. It re-checks each
 central claim by simulation, exact linear algebra, **independent reverse-mode automatic
